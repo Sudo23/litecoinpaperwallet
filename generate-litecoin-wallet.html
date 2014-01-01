@@ -5951,7 +5951,7 @@
               &nbsp;
           	</div>
 			<div id="tagline">Open Source Client-Side JavaScript litecoin Wallet Generator</div>
-			<div id="tagsite">For help &amp; security tips, visit <a href="https://litecoinpaperwallet.com">litecoinpaperwallet.com</a></div>
+			<div id="tagsite">To generate wallets offline please <a href="https://github.com/f13xo/litecoinpaperwallet/archive/master.zip" target="_blank"> download the zip file here. </a></div>
             <div id="tagwarning"></div>
         
 		<div class="menu" id="menu">
@@ -5988,12 +5988,18 @@
 				</div>
 				<div class="instructionsarea">
 					<div class="notes">
-						<h1><span id="instructions0">Welcome! Let's print out a beautiful and secure wallet for your litecoins.</span></h1>
+						<h1><span id="instructions0"><center>Welcome! Let's print out a beautiful and secure wallet for your litecoins.</center></span></h1>
+						<center><blink>**********</blink></center>
+						<span id="blurb1"><center>To generate wallets offline please download the zip file <a href="https://github.com/f13xo/litecoinpaperwallet/archive/master.zip" target="_blank"> here. </a></center></span>
+						<br />
+						<center><blink>**********</blink></center>
+						<br />
 						
-						<span id="blurb1">This website is a work in progress. It is forked from Canton Becker's bitcoinpaperwallet.com code and uses artwork created by Adrien Grelet. </span>
-						<br /><br />
 						<span id="instructions2"><center><strong>Holographic Tamper-Proof Stickers are now available. <a href="http://litecoinpaperwallet.com" target="_blank">Click Here</a></strong></center></span>
 						<br />
+						<center><img src="images/stickered.jpg"" width="400" height="203" alt="Sealed Wallet"></center>
+						<br />
+						<span id="instructions2"><center><strong>Holographic Tamper-Proof Stickers are now available. <a href="http://litecoinpaperwallet.com" target="_blank">Click Here</a></strong></center></span>
 						<br />
 
 						<span id="instructions3"><b>Step 1: Calibrate Printer</b> Before printing out a wallet you'll need to "calibrate" your printer for <b>zoom</b> and <b>horizontal shift</b>. Without proper callibration, your wallet will end up the wrong size or with a misaligned reverse side. Don't forget to write down the zoom/shift values for the next time you need them.</span>
@@ -6099,7 +6105,7 @@
 						<span id="instructions13">Finally seal your wallet by placing two strips of sturdy tape over the top and bottom edges of the private (folded) area: <a href="http://litecoinpaperwallet.com" target="_blank"> Click here to purchase Litecoin branded, holographic stickers.</a></span>
 						<br /><br />	
 
-                        <img src="images/finished-sample-sealed.jpg" width="400" height="203" alt="Sealed Wallet">
+                        <img src="images/stickered.jpg"" width="400" height="203" alt="Sealed Wallet">
 
 						<h1><span id="instructions16">How to add funds to your wallet:</span></h1>
 
@@ -6132,9 +6138,10 @@
 			</div>
 
 			<div class="authorpgp">
-				<span class="item"><a href="https://github.com/f13xo/litecoinpaperwallet" target="_blank" id="footerlabelgithub">GitHub Repository (ZIP Download)</a></span>
+				<span class="item"><a href="https://github.com/f13xo/litecoinpaperwallet" target="_blank" id="footerlabelgithub">GitHub Repository</a></span>
+				<span class="item"><a href="https://github.com/f13xo/litecoinpaperwallet/archive/master.zip" target="_blank">ZIP Download</a></span>
 			</div>			<div class="copyright">
-				<span id="footerlabelcopyright1">&copy; Copyright 2013 Peter Nyssen - based upon Canton Becker fork of bitaddress using artwork by Adrien Grelet</span>
+				<span id="footerlabelcopyright1">&copy; Copyright 2013 Canton Becker fork of bitaddress using artwork by Adrien Grelet</span>
 				<span id="footerlabelcopyright2">JavaScript copyrights are included in the source.</span>
 				<span id="footerlabelnowarranty">No warranty.</span>
 			</div>
@@ -6722,7 +6729,7 @@
 				var walletHtml =
 							"<div class='artwallet' id='artwallet" + i + "'>" +
 				//"<iframe src='litecoin-wallet-01.svg' id='papersvg" + i + "' class='papersvg' ></iframe>" +
-								"<img id='papersvg" + i + "' class='papersvg' src='./images/litfront-300dpi.jpg' />" +
+								"<img id='papersvg" + i + "' class='papersvg' src='images/litfront-300dpi.jpg' />" +
 								"<div id='qrcode_public" + i + "' class='qrcode_public'></div>" +
 								"<div id='qrcode_private" + i + "' class='qrcode_private'></div>" +
 								"<div class='btcaddress' id='btcaddress" + i + "'></div>" +
@@ -7293,13 +7300,14 @@
 
 </body>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	if ("http:" == document.location.protocol || "https:" == document.location.protocol) {
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-45998031-1', 'litecoinpaperwallet.com');
-  ga('send', 'pageview');
-
+	  ga('create', 'UA-45998031-1', 'litecoinpaperwallet.com');
+	  ga('send', 'pageview');
+	}
 </script>
 </html>
